@@ -660,43 +660,43 @@ section {
   transition: all ease-in-out 0.3s;
   height: 100%;
   min-height: 15em;
-  opacity: 0.7;
-}
-
-.featured .icon-box i {
-  color: #e96b56;
-  font-size: 42px;
-  margin-bottom: 15px;
-  display: block;
-  line-height: 0;
+  opacity: 0.5;
+  background-size: cover;
 }
 
 .featured .icon-box h3 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 20px;
+  color: #ffffff;
+  opacity: 1;
 }
 
 .featured .icon-box h3 a {
-  color: #545454;
+  color: #ffffff;
   transition: 0.3s;
+  background-color: rgb(84, 84, 84, 0.5);
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .featured .icon-box p {
-  color: #545454;
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: #ffffff;
+  background-color: rgb(84, 84, 84, 0.5);
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .featured .icon-box:hover {
   opacity: 1;
 }
 
-.featured .icon-box:hover i,
 .featured .icon-box:hover h3 a,
 .featured .icon-box:hover p {
-  color: #2e2e2e;
+  color: #ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -725,6 +725,13 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+.about .img-fluid{
+  max-width: 625px;
+  max-height: 625px;
+  border-radius: 10px;
+  opacity: 0.8;
 }
 
 /*--------------------------------------------------------------

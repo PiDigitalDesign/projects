@@ -70,7 +70,7 @@ h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #574F40;
+  background: #4d4861;
   padding: 10px 0;
   font-size: 14px;
 }
@@ -660,7 +660,7 @@ section {
   transition: all ease-in-out 0.3s;
   height: 100%;
   min-height: 15em;
-  opacity: 0.5;
+  /* opacity: 1; */
   background-size: cover;
 }
 
@@ -678,6 +678,7 @@ section {
   background-color: rgb(84, 84, 84, 0.5);
   padding: 5px;
   border-radius: 5px;
+  opacity: 0.5;
 }
 
 .featured .icon-box p {
@@ -688,15 +689,17 @@ section {
   background-color: rgb(84, 84, 84, 0.5);
   padding: 5px;
   border-radius: 5px;
+  opacity: 0.5;
 }
 
-.featured .icon-box:hover {
+/* .featured .icon-box:hover {
   opacity: 1;
-}
+} */
 
 .featured .icon-box:hover h3 a,
 .featured .icon-box:hover p {
   color: #ffffff;
+  opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -728,8 +731,8 @@ section {
 }
 
 .about .img-fluid{
-  max-width: 625px;
-  max-height: 625px;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   opacity: 0.8;
 }
@@ -2056,7 +2059,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #574F40;
+  background: #4d4861;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -2064,7 +2067,7 @@ section {
 
 #footer .footer-newsletter {
   padding: 50px 0;
-  background: #574F40;
+  background: #4d4861;
 }
 
 #footer .footer-newsletter h4 {
@@ -2110,7 +2113,7 @@ section {
 }
 
 #footer .footer-top {
-  background: #CCBDA0;
+  background: #40434e;
   border-top: 1px solid #474747;
   border-bottom: 1px solid #474747;
   padding: 60px 0 30px 0;

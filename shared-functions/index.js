@@ -13,10 +13,26 @@ exports.sendMailOverHTTP = functions
             secrets: ["HOSTPRESTO_SMTP_AUTH"]
         },
         (req, res) => {
+            function lookupClientEmail(clientUUID = null) {
+                switch (clientUUID) {
+                    case "a38044de-0f04-4fea-8fa8-d5f174aa46bc":
+                        return "pidigitaldesign123@gmail.com";
+                    default:
+                        return null;
+                }
+            }
+
+            let clientUUID = req.body.uuid
+            let clientEmail = lookupClientEmail(clientUUID);
+            if (clientEmail == null) {
+                // This could be a mistake or potential malicious use, so exit early
+                res.send("Unsupported " + clientUUID);
+                return;
+            }
             const mailOptions = {
                 from: 'support@pidigitaldesign.co.uk',
-                to: req.body.to,
-                subject: req.body.subject,
+                to: clientEmail,
+                subject: `Website Enquiry - ${req.body.name}`,
                 html: `<h2>Contact Form Message</h2>
                 <p>
                    <b>Email: </b>${req.body.email}<br>

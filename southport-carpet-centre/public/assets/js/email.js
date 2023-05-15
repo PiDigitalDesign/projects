@@ -1,9 +1,9 @@
 document.getElementById('contact-us-submit').addEventListener('click', event => {
     event.preventDefault();
     console.log("Start")
-    const leadName = document.getElementById('name').value;
     const leadEmail = document.getElementById('email').value;
     const leadMobile = document.getElementById('phone').value;
+    const leadName = document.getElementById('name').value;
     const leadMessage = document.getElementById('message').value;
 
     const settings = {
@@ -14,11 +14,10 @@ document.getElementById('contact-us-submit').addEventListener('click', event => 
             "Content-Type": "application/x-www-form-urlencoded",
         },
         "data": {
+            "uuid": "a38044de-0f04-4fea-8fa8-d5f174aa46bc",
             "email": leadEmail,
-            "to": "pidigitaldesign123@gmail.com",
-            "subject": `Website Enquiry - ${leadName}`,
-            "name": leadName,
             "mobile": leadMobile,
+            "name": leadName,
             "message": leadMessage
         }
     };

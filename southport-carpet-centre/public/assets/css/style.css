@@ -1,11 +1,3 @@
-/**
-* Template Name: Eterna
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -703,7 +695,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# About
+# About and Services
 --------------------------------------------------------------*/
 .about .content h3 {
   font-weight: 600;
@@ -737,21 +729,19 @@ section {
   opacity: 0.8;
 }
 
-/*--------------------------------------------------------------
-# Our Services
---------------------------------------------------------------*/
-.services .icon-box {
+.about .icon-box {
   text-align: center;
   border: 1px solid #ededed;
   padding: 80px 20px;
+  background-color: white;
   transition: all ease-in-out 0.3s;
 }
 
-.services .icon-box .icon {
+.about .icon-box .icon {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #e96b56;
+  background: #A2B6BB;
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   display: flex;
@@ -761,61 +751,62 @@ section {
   transform-style: preserve-3d;
 }
 
-.services .icon-box .icon i {
+.about .icon-box .icon i {
   color: #fff;
   font-size: 28px;
 }
 
-.services .icon-box .icon::before {
+.about .icon-box .icon::before {
   position: absolute;
   content: "";
   left: -8px;
   top: -8px;
   height: 100%;
   width: 100%;
-  background: #fbe2dd;
+  background: #7597af;
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
 
-.services .icon-box h4 {
+.about .icon-box h4 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-.services .icon-box h4 a {
+.about .icon-box h4 a {
   color: #545454;
 }
 
-.services .icon-box p {
+.about .icon-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.services .icon-box:hover {
-  background: #e96b56;
-  border-color: #e96b56;
+.about .icon-box:hover {
+  background: #A2B6BB;
+  border-color: #A2B6BB;
 }
 
-.services .icon-box:hover .icon {
+.about .icon-box:hover .icon {
   background: #fff;
 }
 
-.services .icon-box:hover .icon i {
-  color: #e96b56;
+.about .icon-box:hover .icon i {
+  color: #A2B6BB;
 }
 
-.services .icon-box:hover .icon::before {
-  background: #ef9383;
+.about .icon-box:hover .icon::before {
+  background: #A2B6BB;
 }
 
-.services .icon-box:hover h4 a,
-.services .icon-box:hover p {
+.about .icon-box:hover h4 a,
+.about .icon-box:hover p {
   color: #fff;
 }
+
 
 /*--------------------------------------------------------------
 # Our Clients

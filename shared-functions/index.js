@@ -1,5 +1,18 @@
 const functions = require('firebase-functions/v2/https')
 const nodemailer = require('nodemailer');
+
+function titleCase(string) {
+    return string[0].toUpperCase() + string.slice(1).toLowerCase();
+}
+
+function generateEmailBody(data) {
+    const fields = data
+    delete fields.uuid
+    let body = ""
+    Object.keys(fields).forEach(k => body += `<b>${titleCase(k)}: </b>${fields[k]}<br>`);
+    return body;
+}
+
 exports.sendMailOverHTTP = functions
     .onRequest(
         {
@@ -29,17 +42,13 @@ exports.sendMailOverHTTP = functions
                 res.send("Unsupported " + clientUUID);
                 return;
             }
+            const body = generateEmailBody(req.body)
             const mailOptions = {
                 from: 'support@pidigitaldesign.co.uk',
                 to: clientEmail,
                 subject: `Website Enquiry - ${req.body.name}`,
                 html: `<h2>Contact Form Message</h2>
-                <p>
-                   <b>Email: </b>${req.body.email}<br>
-                   <b>Mobile: </b>${req.body.mobile}<br>
-                   <b>Name: </b>${req.body.name}<br>
-                   <b>Message: </b>${req.body.message}<br>
-                </p>`
+                ${body}`
             };
             const transporter = nodemailer.createTransport({
                 host: 'mailserver.hostpresto.com',

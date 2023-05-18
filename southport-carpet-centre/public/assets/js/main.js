@@ -258,4 +258,47 @@
      */
     new PureCounter();
 
+    /**
+     * Custom lightbox for gallery page
+     */
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // DOM elements
+        const $imagesContainer = document.getElementById('portfolio-container');
+        const $lightbox = document.getElementById('lightbox');
+      
+        // Get all the images
+        const images = document.querySelectorAll('.images-container img');
+      
+        // Lightbox
+      
+        // Event listeners and triggers
+      
+        // Show lightbox
+        $imagesContainer.addEventListener('click', e => {
+          const imageWrapper = e.target.closest('.portfolio-wrapper');
+          if (imageWrapper) {
+            const image = imageWrapper.querySelector('img');
+            if (image) {
+              $lightbox.innerHTML = '<div class="close-lightbox"></div>' + image.outerHTML;
+              $lightbox.classList.add('show');
+            }
+          }
+        });
+      
+        // Hide Lightbox
+        $lightbox.addEventListener('click', (e) => {
+          if (!e.target.hasAttribute('src')) {
+            $lightbox.classList.remove('show');
+          }
+        });
+      
+        // Loading...
+        setTimeout(() => {
+          $imagesContainer.classList.remove('loading');
+        }, 1500);
+      
+      });
+      
+
 })()

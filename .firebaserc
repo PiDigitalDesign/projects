@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "projects-pidd"
-  }
+  },
+  "targets": {
+    "projects-pidd": {
+      "hosting": {
+        "scc": [
+          "southport-carpet-center"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

@@ -12,14 +12,8 @@
     }
   ],
   "hosting": {
-    "site": "southport-carpet-center",
+    "target": "scc",
     "public": "southport-carpet-centre/public",
-    "rewrites": [
-      {
-        "source": "/api/sendMailOverHTTP",
-        "function": "sendMailOverHTTP"
-      }
-    ],
     "ignore": [
       "firebase.json",
       "**/.*",

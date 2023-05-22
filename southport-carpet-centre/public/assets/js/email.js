@@ -1,5 +1,4 @@
 document.getElementById('contact-us-submit').addEventListener('click', event => {
-    event.preventDefault();
     console.log("Start")
     const leadEmail = document.getElementById('email').value;
     const leadMobile = document.getElementById('phone').value;
@@ -21,10 +20,18 @@ document.getElementById('contact-us-submit').addEventListener('click', event => 
             "message": leadMessage
         }
     };
-    console.log("...")
-    $.ajax(settings)
-        .done(function (response) {
-            console.log("Done!")
-            console.log(response);
-        });
+
+    if (leadEmail !== "" && leadMessage !== "" && leadMobile !== "" && leadName !== "") {
+        console.log("...")
+        $.ajax(settings)
+            .done(function (response) {
+                console.log("Done!");
+                console.log(response);
+                document.getElementById('contact-us-submit').style.background = '#18d26e';
+                document.getElementById('contact-us-submit').innerHTML = 'Submitted, thanks!';
+            });
+    } else {
+        return;
+    }
+    event.preventDefault();
 });

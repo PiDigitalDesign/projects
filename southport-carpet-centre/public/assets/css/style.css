@@ -884,6 +884,12 @@ section {
   margin-bottom: 30px;
 }
 
+.portfolio-wrapper img{
+        object-fit: contain;
+        max-height: 600px;
+        max-width: 400px;
+}
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 25px auto;

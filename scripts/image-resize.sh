@@ -1,5 +1,5 @@
 # Loop through all files in the current directory
-for file in ./*; do
+for file in ./images/*; do
   # Check if the file is an image
   if [[ -f $file && $(file -b --mime-type "$file" | grep -i "image/") ]]; then
     # Generate the new file name

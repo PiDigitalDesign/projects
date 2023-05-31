@@ -275,16 +275,22 @@
         // Event listeners and triggers
       
         // Show lightbox
-        $imagesContainer.addEventListener('click', e => {
-          const imageWrapper = e.target.closest('.portfolio-wrapper');
-          if (imageWrapper) {
-            const image = imageWrapper.querySelector('img');
-            if (image) {
-              $lightbox.innerHTML = '<div class="close-lightbox"></div>' + image.outerHTML;
-              $lightbox.classList.add('show');
+          $imagesContainer.addEventListener('click', e => {
+            const imageWrapper = e.target.closest('.portfolio-wrapper');
+            if (imageWrapper) {
+              const image = imageWrapper.querySelector('img');
+              if (image) {
+                const mediumSrc = image.getAttribute('srcset').split(',')[1].split(' ')[1];
+                const mediumSrcset = mediumSrc.substring(0, mediumSrc.length); // Remove trailing comma
+                const lightboxImage = document.createElement('img');
+                lightboxImage.srcset = mediumSrcset;
+                lightboxImage.sizes = image.sizes;
+                $lightbox.innerHTML = '<div class="close-lightbox"></div>';
+                $lightbox.appendChild(lightboxImage);
+                $lightbox.classList.add('show');
+              }
             }
-          }
-        });
+          });
       
         // Hide Lightbox
         $lightbox.addEventListener('click', (e) => {

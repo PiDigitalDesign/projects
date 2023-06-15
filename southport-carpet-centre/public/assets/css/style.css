@@ -1268,7 +1268,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #e96b56;
+  color: #cc000c;
 }
 
 #footer .footer-top .footer-contact {
@@ -1277,6 +1277,15 @@ section {
 
 #footer .footer-top .footer-contact p {
   line-height: 26px;
+}
+
+#footer .footer-top .footer-contact a {
+  color: #fff;
+  transition: 0.3s;
+}
+
+#footer .footer-top .footer-contact a:hover {
+  color: #cc000c;
 }
 
 #footer .copyright {

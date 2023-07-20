@@ -717,6 +717,11 @@ section {
   font-size: 28px;
 }
 
+.about .icon-box .icon img {
+  height: 36px;
+  width: auto;
+}
+
 .about .icon-box .icon::before {
   position: absolute;
   content: "";
@@ -757,6 +762,10 @@ section {
 
 .about .icon-box:hover .icon i {
   color: #A2B6BB;
+}
+
+.about .icon-box:hover .icon img {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(7%) saturate(522%) hue-rotate(145deg) brightness(92%) contrast(91%);
 }
 
 .about .icon-box:hover .icon::before {
